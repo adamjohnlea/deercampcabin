@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deer Camp Cabin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="index.php" class="logo">Deer Camp Cabin</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Header Image -->
+    <div class="header-image-placeholder">
+        <div class="header-image-content">
+			<img src="images/deer-camp-cabin-landing-page.JPG" alt="Deer Camp Cabin in the woods">
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Elegant Woodland Retreat</h1>
+            <p>A harmonious blend of modern architecture and natural surroundings, creating a serene escape in the heart of the wilderness</p>
+            <a href="#gallery" class="cta-button">Explore Design</a>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Gallery Section -->
+            <section class="section" id="gallery">
+                <h2 class="section-title">Design Gallery</h2>
+                <p class="section-subtitle">Explore the architectural elements and spaces of our woodland cabin</p>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox('Exterior View')">
+                        <img src="images/deer-camp-cabin-landing-page.JPG" alt="Cabin exterior">
+                        <div class="gallery-overlay">
+                            <h3>Exterior View</h3>
+                            <p>Natural materials blend seamlessly with the surrounding forest</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Open Living Space')">
+                        <img src="images/deer-camp-cabin-landing-page.JPG" alt="Living space">
+                        <div class="gallery-overlay">
+                            <h3>Open Living Space</h3>
+                            <p>Expansive windows bring the outside in, creating a light-filled interior</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Kitchen Design')">
+                        <img src="images/deer-camp-cabin-landing-page.JPG" alt="Kitchen">
+                        <div class="gallery-overlay">
+                            <h3>Kitchen Design</h3>
+                            <p>Modern functionality meets rustic charm in this well-appointed space</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Master Suite')">
+                        <img src="images/deer-camp-cabin-landing-page.JPG" alt="Master bedroom">
+                        <div class="gallery-overlay">
+                            <h3>Master Suite</h3>
+                            <p>A tranquil retreat with panoramic views of the surrounding landscape</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Outdoor Living')">
+                        <img src="images/deer-camp-cabin-landing-page.JPG" alt="Deck area">
+                        <div class="gallery-overlay">
+                            <h3>Outdoor Living</h3>
+                            <p>Thoughtfully designed deck spaces extend the living area into nature</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('Architectural Details')">
+                        <img src="images/deer-camp-cabin-landing-page.JPG" alt="Architectural details">
+                        <div class="gallery-overlay">
+                            <h3>Architectural Details</h3>
+                            <p>Carefully crafted elements that showcase the attention to detail</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="section" id="about">
+                <h2 class="section-title">About the Design</h2>
+                <p class="section-subtitle">A thoughtful approach to modern cabin architecture</p>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>The Deer Camp Cabin represents a harmonious balance between contemporary design and natural surroundings. Our approach focused on creating a structure that feels both modern and timeless, with materials and forms that complement the woodland setting.</p>
+
+                        <p>Sustainability was a key consideration throughout the design process. The cabin incorporates energy-efficient systems, locally-sourced materials, and was carefully positioned to minimize environmental impact while maximizing natural light and views.</p>
+
+                        <p>Every element of the cabin was thoughtfully considered, from the overall form to the smallest details. The result is a space that feels both luxurious and connected to nature—a true retreat from everyday life.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/deer-camp-cabin-landing-page.JPG" alt="Cabin architecture">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="section" id="contact">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Interested in discussing your own architectural project?</p>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Deer Camp Cabin Architecture. All rights reserved.</p>
+            <p>Creating harmonious spaces in natural environments.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
